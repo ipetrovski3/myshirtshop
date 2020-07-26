@@ -1,0 +1,16 @@
+<div class="col-3">
+  <form>
+    <%= form_for @item, local: true do |f| %>
+      <%= f.label :name, class:"form-group" %>
+      <%= f.text_field :name, class:"form-control" %>
+      <%= f.label :price, class:"form-group" %>
+      <%= f.text_field :price, class:"form-control" %>
+      <%= f.label :image, class:"form-group" %>
+      <%= f.file_field :image, class:"form-control" %>
+      <br>
+      <%= f.collection_radio_buttons :product_id, Product.all, :id, :name, class:"form-group" %>
+      <br>
+      <%= f.submit 'Внеси', class:"btn btn-primary mt-3" %>
+    <% end %>
+  </form>
+</div>

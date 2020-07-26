@@ -1,23 +1,13 @@
-
-  <!-- Navigation -->
-
-  <!-- Page Content -->
   <div class="container">
-
     <div class="row">
-
       <div class="col-lg-3">
-
         <h1 class="my-4">Производи</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Маички</a>
-          <a href="#" class="list-group-item">Маски</a>
-          <a href="#" class="list-group-item">Аксесоари</a>
+          <% @products.each do |p| %>
+            <%= link_to p.name, product_path(p), class:"list-group-item" %>
+          <% end %>
         </div>
-
       </div>
-      <!-- /.col-lg-3 -->
-
       <div class="col-lg-9">
 
         <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
@@ -158,13 +148,3 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
